@@ -30,7 +30,7 @@ class AIVoiceAssistant:
     def _create_kb(self):
         try:
             reader = SimpleDirectoryReader(
-                input_files=[r"D:\dev\aiml\projects\git\voice_assistant_llm\rag\restaurant_file.txt"]
+                input_files=[r"rag\restaurant_file.txt"]
             )
             documents = reader.load_data()
             vector_store = QdrantVectorStore(client=self._client, collection_name="kitchen_db")
